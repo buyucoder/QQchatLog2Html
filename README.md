@@ -45,3 +45,10 @@ QQ的导出聊天记录支持3中格式:
 
 对所有图片遍历,如果在聊天记录中有引用就保留,没有就删除
 
+## 正则匹配
+
+1. 匹配base64图片数据:
+```
+------=_NextPart_[A-Z_\.0-9]+\nContent-Type:image/(jpeg|png|gif)\nContent-Transfer-Encoding:base64\nContent-Location:{([A-Z0-9-]+)}\.dat\n+([a-zA-Z0-9+/=\n]+)
+```
+
